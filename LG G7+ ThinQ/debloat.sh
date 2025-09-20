@@ -1,0 +1,65 @@
+#!/bin/bash -e
+for app in \
+	com.android.calendar \
+	com.android.cellbroadcastreceiver \
+	com.android.chrome \
+	com.android.contacts \
+	com.android.gallery3d \
+	com.facebook.appmanager \
+	com.facebook.katana \
+	com.facebook.services \
+	com.facebook.system \
+	com.google.android.apps.docs \
+	com.google.android.apps.docs.editors.docs \
+	com.google.android.apps.docs.editors.sheets \
+	com.google.android.apps.docs.editors.slides \
+	com.google.android.apps.maps \
+	com.google.android.apps.messaging \
+	com.google.android.apps.photos \
+	com.google.android.apps.tachyon \
+	com.google.android.apps.turbo \
+	com.google.android.apps.wellbeing \
+	com.google.android.gm \
+	com.google.android.googlequicksearchbox \
+	com.google.android.music \
+	com.google.android.syncadapters.calendar \
+	com.google.android.syncadapters.contacts \
+	com.google.android.videos \
+	com.google.android.youtube \
+	com.google.ar.core \
+	com.google.ar.lens \
+	com.instagram.android \
+	com.lge.android.atservice \
+	com.lge.appbox.client \
+	com.lge.appbox.installer \
+	com.lge.bnr.launcher \
+	com.lge.cloudhub \
+	com.lge.email \
+	com.lge.filemanager \
+	com.lge.gamelauncher \
+	com.lge.gametools.gamerecorder \
+	com.lge.gametuner \
+	com.lge.ia.task.smartcare \
+	com.lge.ia.task.smartsetting \
+	com.lge.leccp \
+	com.lge.lgaccount \
+	com.lge.lgbroadcastradioservice \
+	com.lge.lgdmsclient \
+	com.lge.lgworld \
+	com.lge.lifetracker \
+	com.lge.music \
+	com.lge.qmemoplus \
+	com.lge.smartdoctor.webview \
+	com.lge.smartenabler \
+	com.lge.smartshare \
+	com.lge.smartshare.provider \
+	com.lge.smartsharepush \
+	com.lge.smartsuggestion \
+	com.lge.sync \
+	com.lge.updatecenter \
+	com.rsupport.rs.activity.lge.allinone \
+; do
+	echo "Uninstalling $app..." && 
+	adb uninstall --user 0 $app || 
+	true
+done
