@@ -33,6 +33,7 @@ for app in \
 	com.lge.appbox.client \
 	com.lge.appbox.installer \
 	com.lge.bnr.launcher \
+	com.lge.clock \
 	com.lge.cloudhub \
 	com.lge.email \
 	com.lge.filemanager \
